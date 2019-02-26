@@ -1,0 +1,27 @@
+//
+//  MQTT_PrefixHeader.pch
+//  MQTT
+//
+//  Created by 休杰克曼 on 2019/2/22.
+//  Copyright © 2019 休杰克曼. All rights reserved.
+//
+
+#ifndef MQTT_PrefixHeader_pch
+#define MQTT_PrefixHeader_pch
+
+#import "Masonry.h"
+
+#define KDeviceHeight     [UIScreen mainScreen].bounds.size.height
+#define KDeviceWidth      [UIScreen mainScreen].bounds.size.width
+#define kStatusBarHeight      (KDeviceHeight >= 812 ? 44 : 20)
+#define kNavBarHeight      (KDeviceHeight >= 812 ? 88 : 64)
+
+#define MQTTUserSingleTopic(strname)     [NSString stringWithFormat:@"%@/%@-%@",(strname),[NSDictionary dictionaryWithContentsOfURL:[[[NSBundle mainBundle]bundleURL] URLByAppendingPathComponent:@"MQTT.plist"]][@"Single"],@"XXX"]
+
+
+#define MQTTUserGroupTopic(strname)     [NSString stringWithFormat:@"%@/%@",[NSDictionary dictionaryWithContentsOfURL:[[[NSBundle mainBundle]bundleURL] URLByAppendingPathComponent:@"MQTT.plist"]][@"Group"],(strname)]
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* MQTT_PrefixHeader_pch */

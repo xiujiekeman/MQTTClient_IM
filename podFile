@@ -1,0 +1,6 @@
+target 'MQTT' do
+
+   pod 'MQTTClient', '~> 0.15.2'
+   pod 'Masonry'
+
+end
